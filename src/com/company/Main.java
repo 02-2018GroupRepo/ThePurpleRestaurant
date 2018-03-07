@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
         try (BufferedReader customer = new BufferedReader(new InputStreamReader(System.in))) {
 
