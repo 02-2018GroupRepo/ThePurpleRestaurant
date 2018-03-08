@@ -18,8 +18,8 @@ public class Cashier implements Payable {
         payBill(amountPaid);
     }
 
-    public double getBill() {
-        return bill;
+    public void takeOrder (double price){
+        bill += price;
     }
 
     public double getAmountPaid() {

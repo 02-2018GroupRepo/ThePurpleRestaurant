@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Map;
+
 public class Waiter implements PayableWithTip {
 
 
@@ -17,6 +19,10 @@ public class Waiter implements PayableWithTip {
         this.bill = bill;
     }
 
+    public void takeOrder (double price){
+        bill += price;
+    }
+
     public void addTipToTotal(double tipAmount) {
         this.tipAmount = tipAmount;
       this.totalWithTip = this.bill + tipAmount;
@@ -24,7 +30,6 @@ public class Waiter implements PayableWithTip {
 
 
     public double getTotalAmountToBePaid() {
-
         return bill;
     }
 
@@ -34,10 +39,6 @@ public class Waiter implements PayableWithTip {
 
     public double getTotalWithTip() {
         return totalWithTip;
-    }
-
-    public double getBillAmount() {
-        return bill;
     }
 
     public double payBill(double amount) {
@@ -50,9 +51,9 @@ public class Waiter implements PayableWithTip {
         return changeAmount;
     }
 
-    public void displayBillBeforeTip(){
-        System.out.println("Your bill is: $" + getBillAmount());
-    }
+//    public void displayBillBeforeTip(){
+//        System.out.println("Your bill is: $" + getBillAmount());
+//    }
 
     public void displayBillAfterTip(){
         System.out.println("Your bill after tip is $" + getTotalWithTip());
