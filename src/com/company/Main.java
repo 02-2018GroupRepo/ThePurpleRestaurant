@@ -11,7 +11,8 @@ public class Main {
         System.out.println("You added a tip of $" + w.getTipAmount());
         w.payBill(40);
         System.out.println(w.toString());
-       Cashier c = new Cashier(10.00, 12.00);
+
+        Cashier c = new Cashier(10.00, 12.00);
         System.out.println(c.toString());
 
     }
